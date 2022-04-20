@@ -1,3 +1,33 @@
+
+"""
+힙에 하나씩 원소를 삽입하는 방식.
+
+부모 -> i 일때,  
+왼자식 -> 2i + 1
+오른자식 -> 2i + 2
+
+자식이 부모 찾기 : int ((child - 1)/2)
+
+여기서는 인덱스를 0부터 시작한다.
+
+부모의 인덱스는 0 이하가 될 수 없음.
+바꾸는 기준은, 부모보다 자식이 더 클때
+
+2018112070 이희준
+"""
+def create_heap(arr: list[int]):
+    # i = 1일때는 원소가 하나라 포함 안함
+    for child in range(1, len(arr)): # 삽입은 child 입장이다.
+        parent = int((child - 1) / 2) 
+        while parent > 0 : # 부모가 있으면
+            if arr[parent] < arr[child] : # 자식이 더 크면
+                arr[parent], arr[child] = arr[child], arr[parent] # 자리 바꾼다.
+                child = parent # 부모 자리로 이동한 자식
+            else : # 자식이 더 크지 않은 경우
+                break # 더 이상 이동 안한다.
+
+
+
 # 0~n-1 까지
 # 부모는 int((n-1)/2)
 # 자식은 왼 + 1 오 + 2
@@ -16,6 +46,10 @@ def make_heap1(arr: list[int]):
         print(arr)
 
 # 스왑하는 함수.
+
+
+
+
 
 
 def swap_if(arr: list[int], x: int, y: int):
