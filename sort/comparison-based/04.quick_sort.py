@@ -3,6 +3,7 @@ from queue import SimpleQueue
 from random import sample
 
 
+
 def get_rand():
     # 1 ~ 1000000 사이의 값 중 10개를 뽑는다.
     return sample(range(1, 1000001), 10)
