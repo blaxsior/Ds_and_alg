@@ -1,6 +1,5 @@
 #brute-force, 하향식 동적 프로그래밍
 
-#2018112070 이희준
 def make_rod_cut(length: int):
     '''
     length 길이의 나무를 자르기 위한 알고리즘.
@@ -60,7 +59,6 @@ def make_rod_cut(length: int):
     
     return list(result) # 리스트로 바꿔서 반환
 
-#2018112070 이희준
 def brute_rod_cut(p: list[int], n: int):
     '''
     @param p 가격이 저장된 테이블
@@ -84,7 +82,7 @@ def brute_rod_cut(p: list[int], n: int):
             result = temp
     return result
 
-#2018112070 이희준
+
 if __name__ == '__main__':
     p = [1,5,8,9,10,17,17,20,24,30]
     cut_rods = make_rod_cut(9)

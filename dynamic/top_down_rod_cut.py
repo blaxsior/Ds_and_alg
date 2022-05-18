@@ -1,4 +1,3 @@
-#2018112070 이희준
 def top_down_rod_cut(p: list[int], n: int, r: list[int]):
     '''
     하향식으로 구현된 막대자르기 알고리즘
